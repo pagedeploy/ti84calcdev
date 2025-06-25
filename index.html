@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta property="og:title" content="TI84 Calculator Dev" />
+    <meta
+      property="og:description"
+      content="The official website to download Sachin Agrawal's TI 84 Calculator programs."
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/pagedeploy/cdn/blob/main/calculator/ti84.png?raw=true"
+    />
+    <meta property="og:url" content="https://pagedeploy.github.io/ti84calcdev" />
+    <meta property="og:type" content="website" />
+
+    <link
+      rel="icon"
+      href="https://github.com/pagedeploy/cdn/blob/main/calculator.png?raw=true"
+    />
+    <title>TI84 Calculator Dev</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Courier+Prime"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Nunito", sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+      code {
+        font-family: "Courier Prime", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w2-orange w3-card">
+        <style>
+          .icon {
+            vertical-align: middle;
+            margin-right: 5px;
+            width: 14px; /* Adjust the width as needed */
+            height: 14px; /* Adjust the height as needed */
+          }
+        </style>
+        <a
+          class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0)"
+          onclick="myFunction()"
+          title="Toggle Navigation Menu"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">
+          <img
+            src="https://github.com/pagedeploy/cdn/blob/main/calculator.png?raw=true"
+            alt="Home Icon"
+            class="icon"
+          />HOME</a
+        >
+        <a
+          href="#math"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >Math</a
+        >
+        <a
+          href="#science"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >Science</a
+        >
+        <a
+          href="#fun"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >Fun</a
+        >
+        <a
+          href="#installation"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >Installation</a
+        >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >Contact</a
+        >
+        <a
+          href="#about"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
+          >About</a
+        >
+      </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div
+      id="navDemo"
+      class="w3-bar-block w2-orange w3-hide w3-hide-large w3-hide-medium w3-top"
+      style="margin-top: 46px"
+    >
+      <a
+        href="#math"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Math</a
+      >
+      <a
+        href="#science"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Science</a
+      >
+      <a
+        href="#fun"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Fun</a
+      >
+      <a
+        href="#installation"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Installation</a
+      >
+      <a
+        href="#contact"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Contact</a
+      >
+      <a
+        href="#about"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >About</a
+      >
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width: 2000px; margin-top: 46px">
+      <div class="w3-gray">
+        <div
+          class="w3-container w3-content w3-padding-32"
+          style="max-width: 800px"
+        >
+          <h1 class="w3-wide w3-center">TI84 CALCULATOR DEV</h1>
+          <h6 class="w3-opacity w3-center">
+            <i
+              >The official website to download my TI 84 Calculator programs.</i
+            >
+          </h6>
+          <h5 class="w3-center">
+            Everything is free and open source under the MIT license!
+          </h5>
+        </div>
+      </div>
+
+      <!-- The Math Section -->
+      <div
+        class="w3-container w3-content w3-center w3-padding-32"
+        style="max-width: 800px"
+        id="math"
+      >
+        <style>
+          .text-with-padding {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          .image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .image-overlay {
+            position: absolute;
+            width: 33%;
+            height: 37%;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .w2-orange {
+            background-color: #fabc23;
+          }
+        </style>
+        <h2 class="w3-wide">MATH</h2>
+        <p class="w3-opacity"><i>Speed up your problem solving!</i></p>
+        <div class="w3-row w3-padding-16">
+          <div class="w3-third w3-margin-top">
+            <h5>Arc Length</h5>
+            <p class="text-with-padding">
+              How to solve for the arc length parameter.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img3.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/ArcLengthParameter.8xp"
+              download="ArcLengthParameter.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Bernoulli</h5>
+            <p class="text-with-padding">
+              How to solve a Bernoulli differential equation.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img4.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/BernoulliEquation.8xp"
+              download="BernoulliEquation.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Common Derivatives</h5>
+            <p class="text-with-padding">
+              A bunch of really common derivatives.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img5.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/CommonDerivatives.8xp"
+              download="CommonDerivatives.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Common Integrals</h5>
+            <p class="text-with-padding">A bunch of really common integrals.</p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img6.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/CommonIntegrals.8xp"
+              download="CommonIntegrals.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Derivative Rules</h5>
+            <p class="text-with-padding">
+              Power, Chain, Product, and Quotient Rules.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img7.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/DerivativeRules.8xp"
+              download="DerivativeRules.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Log Properties</h5>
+            <p class="text-with-padding">
+              The basic properties of logarithmic functions.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img8.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/LogProperties.8xp"
+              download="LogProperties.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Pythagorean Theorem</h5>
+            <p class="text-with-padding">
+              To solve all things related to right triangles.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img9.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/PythagTheorem.8xp"
+              download="PythagTheorem.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Quadratic Formula</h5>
+            <p class="text-with-padding">
+              To solve quadratic equations with ease.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img10.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/QuadraticFormula.8xp"
+              download="QuadraticFormula.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Simplify Radicals</h5>
+            <p class="text-with-padding">
+              To simplify complex radicals with ease.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img11.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/SimplifyRadicals.8xp"
+              download="SimplifyRadicals.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>System of Equations</h5>
+            <p class="text-with-padding">
+              Solve a system of 2 or more equations.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img12.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/SystemOfEqnSolver.8xp"
+              download="SystemOfEqnSolver.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Trig Derivatives</h5>
+            <p class="text-with-padding">
+              All of the common trigonometric derivatives.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img13.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/TrigDerivatives.8xp"
+              download="TrigDerivatives.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Trig Integrals</h5>
+            <p class="text-with-padding">
+              All of the common trigonometric integrals.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img14.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/TrigIntegrals.8xp"
+              download="TrigIntegrals.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Vector Calculator</h5>
+            <p class="text-with-padding">
+              Dot product, cross product, angle between, and more.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img15.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/VectorCalculator.8xp"
+              download="VectorCalculator.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- The Science Section -->
+      <div id="science" class="w3-light-gray">
+        <div
+          class="w3-container w3-content w3-center w3-padding-32"
+          style="max-width: 800px"
+        >
+          <h2 class="w3-wide">SCIENCE</h2>
+          <p class="w3-opacity"><i>Mainly useful in Chemistry!</i></p>
+          <div class="w3-third w3-margin-top">
+            <h5>AP Chemistry</h5>
+            <p class="text-with-padding">
+              A bunch of handy formulas, equations, and general notes for the
+              AP, or class in general.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img16.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/ChemistryAP.8xp"
+              download="ChemistryAP.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Polyatomic Ions</h5>
+            <p class="text-with-padding">
+              A list of all of the common polyatomics you might need to memorize
+              for class.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img17.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/PolyatomicIons.8xp"
+              download="PolyatomicIons.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- The Fun Section -->
+      <div id="fun">
+        <div
+          class="w3-container w3-content w3-center w3-padding-32"
+          style="max-width: 800px"
+        >
+          <h2 class="w3-wide">FUN</h2>
+          <p class="w3-opacity"><i>Prank others with these!</i></p>
+          <div class="w3-third w3-margin-top">
+            <h5>Add 1 to Answer</h5>
+            <p class="text-with-padding">
+              This program simply adds one to the answer of your input, so
+              1+1=3, etc. It is great to mess with your teachers.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img1.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/Add1Answer.8xp"
+              download="Add1Answer.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+          <div class="w3-third w3-margin-top">
+            <h5>Rickroll</h5>
+            <p class="text-with-padding">
+              Fool your friends by handing them your calculator with this
+              enabled, and watch their reaction when they hit solve.
+            </p>
+            <div class="image-container">
+              <img
+                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img2.png?raw=true"
+                class="w3-margin-bottom"
+                style="width: 60%"
+              />
+            </div>
+            <a
+              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/Rickroll.8xp"
+              download="Rickroll.8xp"
+              ><button class="w3-button w3-gray">Download</button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- The Installation Section -->
+      <div id="installation" class="w3-light-gray">
+        <div
+          class="w3-container w3-content w3-padding-32"
+          style="max-width: 800px"
+        >
+          <h2 class="w3-wide w3-center">INSTALLATION</h2>
+          <p class="w3-opacity w3-center">
+            <i
+              >This is roughly from
+              <a
+                href="https://www.ti84calcwiz.com/downloading-apps-programs-on-ti-84-plus-calculators/"
+                target="_blank"
+                >TI84Calcwiz's</a
+              >
+              site!</i
+            >
+          </p>
+          <h3>Introduction</h3>
+          <p class="w3-justify">
+            Downloading apps and programs onto your TI-84 graphing calculator
+            can extend its abilities, help you gain an edge over your
+            competition in high-stakes tests, or even let you play games on your
+            calculator. <br />
+            <br />
+            This guide applies to every TI-84, including the TI-84 Plus CE,
+            TI-84 Plus, TI-84 Plus C Silver Edition, and TI-84 Plus Silver
+            Edition calculators.
+          </p>
+          <h3>Getting Started</h3>
+          <h5>What You Need</h5>
+          <p class="w3-justify">
+            Any TI-84 Plus Graphing Calculator <br />
+            Calculator Charging Cable (<a
+              href="https://www.amazon.com/Amazon-Basics-Charging-Transfer-Gold-Plated/dp/B00NH13S44?th=1"
+              target="_blank"
+              >Mini USB</a
+            >)<br />
+            TI Connect CE Software (<a
+              href="https://education.ti.com/en/products/computer-software/ti-connect-ce-sw"
+              target="_blank"
+              >Download Here</a
+            >)
+          </p>
+          <h5>Quick Warning</h5>
+          <p class="w3-justify">
+            Make sure you install TI Connect CE! You can't transfer any programs
+            to your calculator without it.
+          </p>
+          <div class="image-container">
+            <img
+              src="https://github.com/pagedeploy/cdn/blob/main/calculator/install1.png?raw=true"
+              class="w3-round"
+              style="width: 60%"
+            />
+          </div>
+          <h3>Downloads</h3>
+          <h5>Websites</h5>
+          <p class="w3-justify">
+            <a href="https://www.ticalc.org/pub/" target="_blank">TICalc.org</a
+            >: TICalc.org has the largest selection of math/science programs, as
+            anyone is able to upload. <br />
+            <a href="https://www.ti84calc.dev/">TI84Calc.dev</a>: TI84Calc.dev
+            is the best for easy-to-use, simple, and helpful programs from a
+            fellow student. <br />
+            <a href="https://www.ti84calcwiz.com/" target="_blank"
+              >TI84CalcWiz.com</a
+            >: TI84CalcWiz.com is the best for games with a quick, painless
+            installation process. <br />
+            <a
+              href="https://education.ti.com/en/software/search/"
+              target="_blank"
+              >TI.com</a
+            >: The Texas Instruments website is the best for high quality apps,
+            but has a relatively small selection.
+          </p>
+          <h5>Navigation</h5>
+          <p class="w3-justify">
+            All the websites are quite simple to navigate, except for
+            TICalc.org, which can be a bit confusing for beginners. For it,
+            click on the link above and choose your calculator. From there,
+            click on
+            <code>basic</code>, then choose a category, either
+            <code>math</code>, <code>science</code>, or even <code>games</code>.
+            You can then download any program you find interesting by clicking
+            on its name.
+          </p>
+          <h3>Installation</h3>
+          <h5>Step 1</h5>
+          <p class="w3-justify">
+            Some downloads come in the form of a <code>.zip</code> file. This
+            means that you need to extract the contents before continuing. To do
+            this, open the <code>.zip</code> file and drag all of the files
+            inside onto your Desktop. If the program instead comes in the form
+            of a <code>.8xg</code> or a <code>.8xp</code>
+            file, move the file to your Desktop. No need to extract first!
+          </p>
+          <div class="image-container">
+            <img
+              src="https://github.com/pagedeploy/cdn/blob/main/calculator/install2.png?raw=true"
+              class="w3-round"
+              style="width: 60%"
+            />
+          </div>
+          <h5>Step 2</h5>
+          <p class="w3-justify">
+            Open TI Connect CE, and click the <code>Calculator Explorer</code> tab on the
+            sidebar. This is the second option under the camera. Plug your
+            calculator into your computer using your charging cable, then make
+            sure it is on.
+          </p>
+          <h5>Step 3</h5>
+          <p class="w3-justify">
+            You should now see a list of all of the files on your calculator.
+            Drag all of the downloaded files into the list to send them to your
+            calculator. A window should now pop up. Click <code>SEND</code> to send the
+            program to your calculator.
+          </p>
+          <div class="image-container">
+            <img
+              src="https://github.com/pagedeploy/cdn/blob/main/calculator/install3.png?raw=true"
+              class="w3-round"
+              style="width: 60%"
+            />
+          </div>
+          <p class="w3-justify">
+            If no window showed up when dragging in the files: you can manually
+            browse to the file you downloaded by clicking <code>Actions</code> in the top
+            bar, and then “Add files from computer…”
+          </p>
+          <h5>Step 4</h5>
+          <p class="w3-justify">
+            If everything worked out, the program/app should now be on your
+            calculator! See below for how to launch it.
+          </p>
+          <div class="image-container">
+            <img
+              src="https://github.com/pagedeploy/cdn/blob/main/calculator/install4.png?raw=true"
+              class="w3-round"
+              style="width: 60%"
+            />
+          </div>
+          <h3>Usage</h3>
+          <p class="w3-justify">
+            Programs and apps are stored under two different places on TI-84
+            calculators. If you are unsure whether the file you downloaded is an
+            app or program, just check both locations.
+          </p>
+          <h5>Apps</h5>
+          <p class="w3-justify">
+            Press the <code>[apps]</code> button on your calculator, and select
+            the app you would like to use from the menu.
+          </p>
+          <h5>Programs</h5>
+          <p class="w3-justify">
+            Press the <code>[prgm]</code> button on your calculator, select the
+            program you want to use, and then press enter to run it.
+          </p>
+          <h3>Troubleshooting</h3>
+          <h5>Errors</h5>
+          <p class="w3-justify">
+            If you get “Error: Invalid”, this means you have a newer operating
+            system that disables the ability to run games. <br />
+            <br />
+            If you get an “Error: Syntax” or an “Error: Archived”, this means
+            you need to update your operating system.
+          </p>
+          <h5>Other</h5>
+          <p class="w3-justify">
+            To exit the game, simply press <code>[del]</code>,
+            <code>[mode]</code>, <code>[clear]</code>, or <code>[on]</code>.
+            <br />
+            <br />
+            To delete a program, Press <code>[2nd]</code>, <code>[+]</code>,
+            <code>[2]</code>, <code>[7]</code>, and then selected the program
+            you want to delete and confirm.
+          </p>
+        </div>
+      </div>
+
+      <!-- The Contact Section -->
+      <div id="contact">
+        <div
+          class="w3-container w3-content w3-padding-32"
+          style="max-width: 800px"
+        >
+          <h2 class="w3-wide w3-center">CONTACT</h2>
+          <p class="w3-opacity w3-center">
+            <i>Questions? Comments? Suggestions?</i>
+          </p>
+          <div class="w3-row w3-padding-12" style="max-width: 800px">
+            <div class="w3-col m6 w3-large w3-margin-top">
+              <img
+                class="icon"
+                src="https://www.svgrepo.com/show/349378/gmail.svg"
+                alt="Icon"
+                width="20"
+              />
+              Email:
+              <a
+                href="mailto:contact@ti84calc.dev?subject=Contact_via_Website"
+                target="_blank"
+                >contact@ti84calc.dev</a
+              >
+              <br />
+              <img
+                class="icon"
+                src="https://www.svgrepo.com/show/349338/discord.svg"
+                alt="Icon"
+                width="20"
+              />
+              Discord:
+              <a
+                href="https://discord.com/users/575795042933932071"
+                target="_blank"
+                >scinovuscrafted</a
+              >
+            </div>
+            <div class="w3-col m6 w3-justify">
+              <p>
+                Feel free to contact me for any questions, comments, or
+                suggestions. I will try to respond to every email or DM I get,
+                but keep in mind that these programs are provided under the MIT
+                license. Also, feel free to modify my programs as desired, but I
+                would highly appreciated if I was still credited as the original
+                author if redistributed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The About Section -->
+      <div id="about" class="w3-light-gray">
+        <div
+          class="w3-container w3-content w3-center w3-padding-32"
+          style="max-width: 800px"
+        >
+          <h2 class="w3-wide">ABOUT</h2>
+          <p class="w3-opacity"><i>Quick Information!</i></p>
+          <p class="w3-justify">
+            This website showcases the TI 84 Calculator programs created by
+            Sachin Agrawal. I'm a self-taught programmer who knows many
+            languages and I'm into app, game, and web development. I got my TI
+            84+ CE in 6th grade, and have been creating programs for it ever
+            since, with an emphasis on improving functionality and speeding up
+            calculations, especially for higher level math classes beyond
+            Calculus.
+          </p>
+
+          <style>
+            .image-with-text {
+              display: flex;
+              align-items: center;
+            }
+
+            .image-with-text img {
+              margin-left: 10px;
+              width: 100px; /* Adjust the width as needed */
+              height: auto; /* Maintain aspect ratio */
+            }
+          </style>
+
+          <div class="image-with-text w3-justify">
+            <p>
+              In my free time, I like to play the popular block-based videogame
+              Minecraft. I have a small YouTube channel featuring that content.
+              Please consider subscribing if you like my calculator programs, as
+              it really helps me out:
+              <a
+                href="https://www.youtube.com/@ScinovusCrafted?sub_confirmation=1"
+                target="_blank"
+                >youtube.com/@scinovuscrafted</a
+              >.
+            </p>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+              alt="Image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- End Page Content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-12 w3-center w3-gray w3-xlarge">
+      <p class="w3-medium">
+        © 2023-2025 Sachin Agrawal
+        <a href="https://bit.ly/3MEvBVv" target="_blank">Privacy Policy</a>
+      </p>
+    </footer>
+
+    <script>
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>
