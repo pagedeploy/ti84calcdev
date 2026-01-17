@@ -52,15 +52,14 @@
     </style>
   </head>
   <body>
-    <!-- Navbar -->
     <div class="w3-top">
       <div class="w3-bar w2-orange w3-card">
         <style>
           .icon {
             vertical-align: middle;
             margin-right: 5px;
-            width: 14px; /* Adjust the width as needed */
-            height: 14px; /* Adjust the height as needed */
+            width: 14px;
+            height: 14px;
           }
         </style>
         <a
@@ -77,103 +76,52 @@
             class="icon"
           />HOME</a
         >
-        <a
-          href="#math"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >Math</a
-        >
-        <a
-          href="#science"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >Science</a
-        >
-        <a
-          href="#fun"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >Fun</a
-        >
-        <a
-          href="#installation"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >Installation</a
-        >
-        <a
-          href="#contact"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >Contact</a
-        >
-        <a
-          href="#about"
-          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
-          >About</a
-        >
+        <div id="mainNav"></div>
       </div>
     </div>
 
-    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
     <div
       id="navDemo"
       class="w3-bar-block w2-orange w3-hide w3-hide-large w3-hide-medium w3-top"
       style="margin-top: 46px"
     >
-      <a
-        href="#math"
-        class="w3-bar-item w3-button w3-padding-large"
-        onclick="myFunction()"
-        >Math</a
-      >
-      <a
-        href="#science"
-        class="w3-bar-item w3-button w3-padding-large"
-        onclick="myFunction()"
-        >Science</a
-      >
-      <a
-        href="#fun"
-        class="w3-bar-item w3-button w3-padding-large"
-        onclick="myFunction()"
-        >Fun</a
-      >
-      <a
-        href="#installation"
-        class="w3-bar-item w3-button w3-padding-large"
-        onclick="myFunction()"
-        >Installation</a
-      >
-      <a
-        href="#contact"
-        class="w3-bar-item w3-button w3-padding-large"
-        onclick="myFunction()"
-        >Contact</a
-      >
-      <a
-        href="#about"
-        class="w3-bar-item w3-button w3-padding-large"
-        onclick="myFunction()"
-        >About</a
-      >
     </div>
 
-    <!-- Page content -->
-    <div class="w3-content" style="max-width: 2000px; margin-top: 46px">
-      <div class="w3-gray">
-        <div
-          class="w3-container w3-content w3-padding-32"
-          style="max-width: 800px"
-        >
-          <h1 class="w3-wide w3-center">TI-84 CALCULATOR DEV</h1>
-          <h6 class="w3-opacity w3-center">
-            <i
-              >The official website to download my TI-84 Calculator programs.</i
-            >
-          </h6>
-          <h5 class="w3-center">
-            Everything is free and open source under the MIT license!
-          </h5>
-        </div>
-      </div>
+    <script>
+      const navLinks = [
+        {name: "Math", id: "math"},
+        {name: "Science", id: "science"},
+        {name: "Fun", id: "fun"},
+        {name: "Installation", id: "installation"},
+        {name: "Contact", id: "contact"},
+        {name: "About", id: "about"}
+      ];
+      navLinks.forEach(link => {
+        document.getElementById('mainNav').innerHTML += `
+          <a href="#${link.id}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">${link.name}</a>`;
+        document.getElementById('navDemo').innerHTML += `
+          <a href="#${link.id}" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">${link.name}</a>`;
+      });
+    </script>
 
-      <!-- The Math Section -->
+    <div class="w3-gray">
+      <div
+        class="w3-container w3-content w3-padding-32"
+        style="max-width: 800px; margin-top: 46px"
+      >
+        <h1 class="w3-wide w3-center">TI-84 CALCULATOR DEV</h1>
+        <h6 class="w3-opacity w3-center">
+          <i
+            >The official website to download my TI-84 Calculator programs.</i
+          >
+        </h6>
+        <h5 class="w3-center">
+          Everything is free and open source under the MIT license!
+        </h5>
+      </div>
+    </div>
+
+    <div class="w3-content" style="max-width: 2000px">
       <div
         class="w3-container w3-content w3-center w3-padding-32"
         style="max-width: 800px"
@@ -204,292 +152,72 @@
         </style>
         <h2 class="w3-wide">MATH</h2>
         <p class="w3-opacity"><i>Speed up your problem solving!</i></p>
-        <div class="w3-row w3-padding-16">
-          <div class="w3-third w3-margin-top">
-            <h5>Arc Length</h5>
-            <p class="text-with-padding">
-              How to solve for the arc length parameter.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img3.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/ArcLengthParameter.8xp"
-              download="ArcLengthParameter.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Bernoulli</h5>
-            <p class="text-with-padding">
-              How to solve a Bernoulli differential equation.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img4.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/BernoulliEquation.8xp"
-              download="BernoulliEquation.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Common Derivatives</h5>
-            <p class="text-with-padding">
-              A bunch of really common derivatives.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img5.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/CommonDerivatives.8xp"
-              download="CommonDerivatives.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Common Integrals</h5>
-            <p class="text-with-padding">A bunch of really common integrals.</p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img6.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/CommonIntegrals.8xp"
-              download="CommonIntegrals.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Derivative Rules</h5>
-            <p class="text-with-padding">
-              Power, Chain, Product, and Quotient Rules.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img7.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/DerivativeRules.8xp"
-              download="DerivativeRules.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Log Properties</h5>
-            <p class="text-with-padding">
-              The basic properties of logarithmic functions.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img8.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/LogProperties.8xp"
-              download="LogProperties.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Pythagorean Theorem</h5>
-            <p class="text-with-padding">
-              To solve all things related to right triangles.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img9.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/PythagTheorem.8xp"
-              download="PythagTheorem.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Quadratic Formula</h5>
-            <p class="text-with-padding">
-              To solve quadratic equations with ease.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img10.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/QuadraticFormula.8xp"
-              download="QuadraticFormula.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Simplify Radicals</h5>
-            <p class="text-with-padding">
-              To simplify complex radicals with ease.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img11.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/SimplifyRadicals.8xp"
-              download="SimplifyRadicals.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>System of Equations</h5>
-            <p class="text-with-padding">
-              Solve a system of 2 or more equations.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img12.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/SystemOfEqnSolver.8xp"
-              download="SystemOfEqnSolver.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Trig Derivatives</h5>
-            <p class="text-with-padding">
-              All of the common trigonometric derivatives.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img13.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/TrigDerivatives.8xp"
-              download="TrigDerivatives.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Trig Integrals</h5>
-            <p class="text-with-padding">
-              All of the common trigonometric integrals.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img14.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/TrigIntegrals.8xp"
-              download="TrigIntegrals.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Vector Calculator</h5>
-            <p class="text-with-padding">
-              Dot product, cross product, angle between, and more.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img15.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/VectorCalculator.8xp"
-              download="VectorCalculator.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-        </div>
+        <div class="w3-row w3-padding-16" id="mathPrograms"></div>
+        <script>
+          const mathPrograms = [
+            {title: "Arc Length", desc: "How to solve for the arc length parameter.", img: 3, file: "ArcLengthParameter"},
+            {title: "Bernoulli", desc: "How to solve a Bernoulli differential equation.", img: 4, file: "BernoulliEquation"},
+            {title: "Common Derivatives", desc: "A bunch of really common derivatives.", img: 5, file: "CommonDerivatives"},
+            {title: "Common Integrals", desc: "A bunch of really common integrals.", img: 6, file: "CommonIntegrals"},
+            {title: "Derivative Rules", desc: "Power, Chain, Product, and Quotient Rules.", img: 7, file: "DerivativeRules"},
+            {title: "Log Properties", desc: "The basic properties of logarithmic functions.", img: 8, file: "LogProperties"},
+            {title: "Pythagorean Theorem", desc: "To solve all things related to right triangles.", img: 9, file: "PythagTheorem"},
+            {title: "Quadratic Formula", desc: "To solve quadratic equations with ease.", img: 10, file: "QuadraticFormula"},
+            {title: "Simplify Radicals", desc: "To simplify complex radicals with ease.", img: 11, file: "SimplifyRadicals"},
+            {title: "System of Equations", desc: "Solve a system of 2 or more equations.", img: 12, file: "SystemOfEqnSolver"},
+            {title: "Trig Derivatives", desc: "All of the common trigonometric derivatives.", img: 13, file: "TrigDerivatives"},
+            {title: "Trig Integrals", desc: "All of the common trigonometric integrals.", img: 14, file: "TrigIntegrals"},
+            {title: "Vector Calculator", desc: "Dot product, cross product, angle between, and more.", img: 15, file: "VectorCalculator"}
+          ];
+          mathPrograms.forEach(p => {
+            document.getElementById('mathPrograms').innerHTML += `
+              <div class="w3-third w3-margin-top">
+                <h5>${p.title}</h5>
+                <p class="text-with-padding">${p.desc}</p>
+                <div class="image-container">
+                  <img src="https://github.com/pagedeploy/cdn/blob/main/calculator/img${p.img}.png?raw=true" class="w3-margin-bottom" style="width: 60%" />
+                </div>
+                <a href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/${p.file}.8xp" download="${p.file}.8xp">
+                  <button class="w3-button w3-gray">Download</button>
+                </a>
+              </div>`;
+          });
+        </script>
       </div>
+    </div>
 
-      <!-- The Science Section -->
-      <div id="science" class="w3-light-gray">
-        <div
-          class="w3-container w3-content w3-center w3-padding-32"
-          style="max-width: 800px"
-        >
-          <h2 class="w3-wide">SCIENCE</h2>
+    <div id="science" class="w3-light-gray">
+      <div
+        class="w3-container w3-content w3-center w3-padding-32"
+        style="max-width: 800px"
+      >
+        <h2 class="w3-wide">SCIENCE</h2>
           <p class="w3-opacity"><i>Mainly useful in Chemistry!</i></p>
-          <div class="w3-third w3-margin-top">
-            <h5>AP Chemistry</h5>
-            <p class="text-with-padding">
-              A bunch of handy formulas, equations, and general notes for the
-              AP, or class in general.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img16.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/ChemistryAP.8xp"
-              download="ChemistryAP.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Polyatomic Ions</h5>
-            <p class="text-with-padding">
-              A list of all of the common polyatomics you might need to memorize
-              for class.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img17.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/PolyatomicIons.8xp"
-              download="PolyatomicIons.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
+          <div id="sciencePrograms"></div>
+          <script>
+            const sciencePrograms = [
+              {title: "AP Chemistry", desc: "A bunch of handy formulas, equations, and general notes for the AP, or class in general.", img: 16, file: "ChemistryAP"},
+              {title: "Polyatomic Ions", desc: "A list of all of the common polyatomics you might need to memorize for class.", img: 17, file: "PolyatomicIons"}
+            ];
+            sciencePrograms.forEach(p => {
+              document.getElementById('sciencePrograms').innerHTML += `
+                <div class="w3-third w3-margin-top">
+                  <h5>${p.title}</h5>
+                  <p class="text-with-padding">${p.desc}</p>
+                  <div class="image-container">
+                    <img src="https://github.com/pagedeploy/cdn/blob/main/calculator/img${p.img}.png?raw=true" class="w3-margin-bottom" style="width: 60%" />
+                  </div>
+                  <a href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/${p.file}.8xp" download="${p.file}.8xp">
+                    <button class="w3-button w3-gray">Download</button>
+                  </a>
+                </div>`;
+            });
+          </script>
         </div>
       </div>
+    </div>
 
-      <!-- The Fun Section -->
+    <div class="w3-content" style="max-width: 2000px">
       <div id="fun">
         <div
           class="w3-container w3-content w3-center w3-padding-32"
@@ -497,54 +225,36 @@
         >
           <h2 class="w3-wide">FUN</h2>
           <p class="w3-opacity"><i>Prank others with these!</i></p>
-          <div class="w3-third w3-margin-top">
-            <h5>Add 1 to Answer</h5>
-            <p class="text-with-padding">
-              This program simply adds one to the answer of your input, so
-              1+1=3, etc. It is great to mess with your teachers.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img1.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/Add1Answer.8xp"
-              download="Add1Answer.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
-          <div class="w3-third w3-margin-top">
-            <h5>Rickroll</h5>
-            <p class="text-with-padding">
-              Fool your friends by handing them your calculator with this
-              enabled, and watch their reaction when they hit solve.
-            </p>
-            <div class="image-container">
-              <img
-                src="https://github.com/pagedeploy/cdn/blob/main/calculator/img2.png?raw=true"
-                class="w3-margin-bottom"
-                style="width: 60%"
-              />
-            </div>
-            <a
-              href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/Rickroll.8xp"
-              download="Rickroll.8xp"
-              ><button class="w3-button w3-gray">Download</button></a
-            >
-          </div>
+          <div id="funPrograms"></div>
+          <script>
+            const funPrograms = [
+              {title: "Add 1 to Answer", desc: "This program simply adds one to the answer of your input, so 1+1=3, etc. It is great to mess with your teachers.", img: 1, file: "Add1Answer"},
+              {title: "Rickroll", desc: "Fool your friends by handing them your calculator with this enabled, and watch their reaction when they hit solve.", img: 2, file: "Rickroll"}
+            ];
+            funPrograms.forEach(p => {
+              document.getElementById('funPrograms').innerHTML += `
+                <div class="w3-third w3-margin-top">
+                  <h5>${p.title}</h5>
+                  <p class="text-with-padding">${p.desc}</p>
+                  <div class="image-container">
+                    <img src="https://github.com/pagedeploy/cdn/blob/main/calculator/img${p.img}.png?raw=true" class="w3-margin-bottom" style="width: 60%" />
+                  </div>
+                  <a href="https://github.com/pagedeploy/cdn/raw/refs/heads/main/calculator/programs/${p.file}.8xp" download="${p.file}.8xp">
+                    <button class="w3-button w3-gray">Download</button>
+                  </a>
+                </div>`;
+            });
+          </script>
         </div>
       </div>
+    </div>
 
-      <!-- The Installation Section -->
-      <div id="installation" class="w3-light-gray">
-        <div
-          class="w3-container w3-content w3-padding-32"
-          style="max-width: 800px"
-        >
-          <h2 class="w3-wide w3-center">INSTALLATION</h2>
+    <div id="installation" class="w3-light-gray">
+      <div
+        class="w3-container w3-content w3-padding-32"
+        style="max-width: 800px"
+      >
+        <h2 class="w3-wide w3-center">INSTALLATION</h2>
           <p class="w3-opacity w3-center">
             <i
               >This is roughly from
@@ -717,8 +427,9 @@
           </p>
         </div>
       </div>
+    </div>
 
-      <!-- The Contact Section -->
+    <div class="w3-content" style="max-width: 2000px">
       <div id="contact">
         <div
           class="w3-container w3-content w3-padding-32"
@@ -769,14 +480,14 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- The About Section -->
-      <div id="about" class="w3-light-gray">
-        <div
-          class="w3-container w3-content w3-center w3-padding-32"
-          style="max-width: 800px"
-        >
-          <h2 class="w3-wide">ABOUT</h2>
+    <div id="about" class="w3-light-gray">
+      <div
+        class="w3-container w3-content w3-center w3-padding-32"
+        style="max-width: 800px"
+      >
+        <h2 class="w3-wide">ABOUT</h2>
           <p class="w3-opacity"><i>Quick Information!</i></p>
           <p class="w3-justify">
             This website showcases the TI-84 Calculator programs created by
@@ -796,8 +507,8 @@
 
             .image-with-text img {
               margin-left: 10px;
-              width: 100px; /* Adjust the width as needed */
-              height: auto; /* Maintain aspect ratio */
+              width: 100px;
+              height: auto;
             }
           </style>
 
@@ -820,20 +531,16 @@
           </div>
         </div>
       </div>
-
-      <!-- End Page Content -->
     </div>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-12 w3-center w3-gray w3-xlarge">
-      <p class="w3-medium">
-        © 2023-2025 Sachin Agrawal
+    <footer class="w3-container w3-padding-12 w3-center w3-gray w3-small">
+      <p>
+        © 2023-2026 Sachin Agrawal
         <a href="https://bit.ly/3MEvBVv" target="_blank">Privacy Policy</a>
       </p>
     </footer>
 
     <script>
-      // Used to toggle the menu on small screens when clicking on the menu button
       function myFunction() {
         var x = document.getElementById("navDemo");
         if (x.className.indexOf("w3-show") == -1) {
